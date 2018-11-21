@@ -311,7 +311,7 @@
                         [(equal? rator "/")
                          (arithmetic (string->procedure rator) exp1 exp2 env)]
                         [(equal? rator "cons")
-                         (pair-val (value-of (car exp) env) (value-of (cdr exp) env))]
+                         (pair-val (value-of exp1 env) (value-of exp2 env))]
                         [else (eopl:error 'value-of "Expected a good rator")]))
       (bool-unary-app-exp (rator exp1)
                           (let ([val (value-of exp1 env)])
