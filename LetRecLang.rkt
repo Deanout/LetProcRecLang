@@ -472,3 +472,15 @@ in let true = zero?(0)
                              then false
                              else (((makeeven makeeven) makeodd) -(x, 1))
          in ((makeodd makeeven) makeodd)")
+         
+; Let 0 = *
+; Let 1 = +
+; Let 2 = -
+; Can modify to allow symbols if needed during exam.
+(define bintreetest
+  "cons(0,
+    cons(
+     cons(1,
+      cons(7,8)),
+     cons(-1,
+      cons(10, 11))))")
